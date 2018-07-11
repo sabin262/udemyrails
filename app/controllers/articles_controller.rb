@@ -15,7 +15,7 @@ class ArticlesController < ApplicationController
 	def create #used for new
 		 @article = Article.new(article_params)#cannot directly send through params so method used
 		 if @article.save
-		 	flash[:notice] = "Article Saved!!"
+		 	flash[:success] = "Article Saved!!"
 		 	redirect_to article_path(@article)#If article is saved then redirect to article_path ie show.html.erb
 		 else
 		 	render 'new'
@@ -24,7 +24,7 @@ class ArticlesController < ApplicationController
 
 	def update #used for edit
 		if @article.update(article_params)
-			flash[:notice] = "Article Updated"
+			flash[:success] = "Article Updated"
 			redirect_to article_path(@article)
 		else
 			render 'edit'
@@ -38,7 +38,7 @@ class ArticlesController < ApplicationController
 
 	def destroy
 		@article.destroy
-		flash[:notice] = "Deleted"
+		flash[:danger] = "Deleted"
 		redirect_to articles_path
 	end
 
