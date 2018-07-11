@@ -7,6 +7,12 @@
 	font-family: 'Abel';
 }
 
+#navlink{
+	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
 $navbar-default-bg: #713315;
 
 @import "bootstrap-sprockets";
@@ -43,9 +49,6 @@ $navbar-default-bg: #713315;
 	margin: 0 auto;
 }
 
-
-
-
 .btn-xlarge{
 	background-color: #713315; 
 }
@@ -60,6 +63,18 @@ $navbar-default-bg: #713315;
 }
 .description{
 	margin-top: 0;
+}
+
+.article-title a{
+	color: #713315;
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.article-body{
+	border-top: 1px solid #713315;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 .footer{
