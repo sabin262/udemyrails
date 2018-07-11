@@ -37,6 +37,14 @@ class ArticlesController < ApplicationController
 		@article = Article.find(params[:id])#use id to show the article that was just saved
 	end
 
+
+	def destroy
+		@article = Article.find(params[:id])
+		@article.destroy
+		flash[:notice] = "Deleted"
+		redirect_to articles_path
+	end
+	
 	private
 		def article_params
 			params.require(:article).permit(:title, :description)#whitelist the params		
