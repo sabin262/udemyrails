@@ -1,9 +1,19 @@
+@import	url('https://fonts.googleapis.com/css?family=Abel');
+*{
+	font-family: 'Abel';
+}
+
+.nav,.navbar{
+	font-family: 'Abel';
+}
+
 $navbar-default-bg: #713315;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
 #logo{
+	font-family: 'Abel';
 	float: left;
 	color: #ffffff;
 	text-transform: uppercase;	 
@@ -66,5 +76,5 @@ $navbar-default-bg: #713315;
 
 footer ul li{
 	float: left;
-	margin-left: 15px;
+	margin-left: 15px; 
 }
